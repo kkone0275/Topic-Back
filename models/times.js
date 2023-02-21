@@ -11,6 +11,10 @@ const schema = new Schema({
   },
   date: {
     type: String,
+    required: [true, '缺少日期']
+  },
+  hour: {
+    type: String,
     required: false
   },
   category: {
