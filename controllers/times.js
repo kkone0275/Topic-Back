@@ -6,6 +6,7 @@ export const createTime = async (req, res) => {
       name: req.body.name,
       u_id: req.user._id,
       date: req.body.date,
+      hour: req.body.hour,
       description: req.body.description,
       sell: req.body.sell,
       category: req.body.category,
@@ -79,6 +80,8 @@ export const editTime = async (req, res) => {
     const result = await times.findByIdAndUpdate(req.params.id, {
       name: req.body.name,
       description: req.body.description,
+      date: req.body.date,
+      hour: req.body.hour,
       sell: req.body.sell,
       category: req.body.category,
       volume: req.body.volume

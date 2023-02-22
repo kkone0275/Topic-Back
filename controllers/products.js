@@ -11,11 +11,14 @@ export const createProduct = async (req, res) => {
     const result = await products.create({
       name: req.body.name,
       price: req.body.price,
+      math: req.body.math,
       u_id: req.user._id,
+      date: req.body.date,
       description: req.body.description,
       image: req?.files.image[0].path || '',
       images: imagePath,
       sell: req.body.sell,
+      genre: req.body.genre,
       category: req.body.category,
       volume: req.body.volume
     })
@@ -95,10 +98,13 @@ export const editProduct = async (req, res) => {
     const result = await products.findByIdAndUpdate(req.params.id, {
       name: req.body.name,
       price: req.body.price,
+      math: req.body.math,
       description: req.body.description,
+      date: req.body.date,
       image: mainImage,
       images: imagePath,
       sell: req.body.sell,
+      genre: req.body.genre,
       category: req.body.category,
       volume: req.body.volume
     }, { new: true })
