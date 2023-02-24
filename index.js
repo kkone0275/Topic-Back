@@ -5,6 +5,7 @@ import cors from 'cors'
 import userRoute from './routes/users.js'
 import productRoute from './routes/products.js'
 import timeRoute from './routes/times.js'
+import inviteRoute from './routes/invites.js'
 import orderRoute from './routes/orders.js'
 import './passport/passport.js'
 
@@ -37,6 +38,7 @@ app.use((_, req, res, next) => {
 
 app.use('/users', userRoute)
 app.use('/products', productRoute)
+app.use('/invites', inviteRoute)
 app.use('/times', timeRoute)
 app.use('/orders', orderRoute)
 

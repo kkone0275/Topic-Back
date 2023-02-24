@@ -28,6 +28,7 @@ export default (req, res, next) => {
     { name: 'image' },
     { name: 'images' }]
   )(req, res, error => {
+    console.log(error)
     if (error instanceof multer.MulterError) {
       let message = '上傳錯誤'
       if (error.code === 'LIMIT_FILE_SIZE') {
