@@ -19,6 +19,10 @@ const schema = new Schema({
     type: String,
     required: [true, '缺少說明']
   },
+  place: {
+    type: String,
+    required: [true, '缺少地點']
+  },
   image: {
     type: String,
     required: [true, '缺少圖片']
