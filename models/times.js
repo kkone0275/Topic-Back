@@ -17,6 +17,10 @@ const schema = new Schema({
     type: String,
     required: false
   },
+  sell: {
+    type: Boolean,
+    default: true
+  },
   category: {
     type: String,
     required: [true, '缺少分類'],

@@ -34,7 +34,7 @@ export const createOrder = async (req, res) => {
 
 export const getMyOrders = async (req, res) => {
   try {
-    const result = await orders.find({ u_id: req.user._id }).populate('products.p_id')
+    const result = await orders.find({ u_id: req.user._id }).populate('products')
     res.status(200).json({ success: true, message: '', result })
   } catch (error) {
     res.status(500).json({ success: false, message: '未知錯誤' })
